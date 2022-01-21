@@ -16,7 +16,7 @@
 // f([]) // Error: parameter can't be an empty
 // ```
 
-
+var i = 0;
 function f (array) {
     if (array.length <= 0) {
         throw Error ("parameter can't be an empty")
@@ -24,14 +24,20 @@ function f (array) {
     else if ( !Array.isArray(array)) {
         throw ("parameter type should be an array")
     }
-    else {
-        for (var i = 0; i < array.length; i++) {
-            console.log(array[i]);
+    else 
+    // {
+    //     for (var i = 0; i < array.length; i++) {
+    //         console.log(array[i]);
             
+    //     }
+
+   { console.log(array[i]);
+    i++;
+    if (i < array.length) {
+
+        f(array)   
+               }
+            }
         }
-    }
-
-}
-
-f([1,2,3]);
-
+        
+f(1,2,3);
